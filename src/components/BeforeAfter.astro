@@ -1,0 +1,275 @@
+---
+---
+
+<section id="before-after" class="before-after">
+  <div class="ba-container">
+    <div class="header-content animate-fade-up">
+      <p class="subtitle">The Transformation</p>
+      <h2 class="section-title">Before Kaveo vs. After Kaveo</h2>
+      <p class="section-desc">Stop competing on price. Start dominating your local area.</p>
+    </div>
+
+    <div class="comparison-grid">
+      
+      <!-- Before Card -->
+      <div class="compare-card before-card animate-fade-up delay-100">
+        <div class="card-badge before-badge">The Old Way</div>
+        <div class="image-container">
+          <img src="/before_lawn.png" alt="Amateur tradie photo" class="compare-img grayscale" />
+          <div class="overlay gradient-red"></div>
+          
+          <!-- New: Giant Metrics instead of bullet points -->
+          <div class="metric-overlay">
+            <div class="metric">
+              <span class="metric-num">0-2</span>
+              <span class="metric-label">Calls / Week</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric">
+              <span class="metric-text">Competing</span>
+              <span class="metric-label">On Price</span>
+            </div>
+          </div>
+
+          <div class="img-label label-red">Before</div>
+        </div>
+      </div>
+
+      <!-- After Card -->
+      <div class="compare-card after-card animate-fade-up delay-200">
+        <div class="card-badge after-badge">The Kaveo Way</div>
+        <div class="image-container">
+          <!-- Ganti URL ini dengan gambar After (Premium AI) hasil AI Anda -->
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800" alt="Premium tradie photo" class="compare-img" />
+          <div class="overlay gradient-blue"></div>
+
+          <!-- New: Giant Metrics instead of bullet points -->
+          <div class="metric-overlay">
+            <div class="metric">
+              <span class="metric-num highlight-green">15+</span>
+              <span class="metric-label text-white">Calls / Week</span>
+            </div>
+            <div class="metric-divider light"></div>
+            <div class="metric">
+              <span class="metric-text highlight-green">Premium</span>
+              <span class="metric-label text-white">Pricing</span>
+            </div>
+          </div>
+
+          <div class="img-label label-blue">After</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .before-after {
+    padding: 8rem 0;
+    background-color: #ffffff;
+    border-top: 1px solid rgba(15, 23, 42, 0.05);
+  }
+
+  .ba-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .header-content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent-blue);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--color-dark-blue);
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .compare-card {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .compare-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .after-card {
+    border: 3px solid var(--color-accent-blue);
+    box-shadow: 0 25px 50px rgba(59, 130, 246, 0.2);
+  }
+
+  .card-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: -2.5rem;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 3rem;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: rotate(45deg);
+    z-index: 20;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .before-badge { background-color: #ef4444; }
+  .after-badge { background-color: var(--color-accent-blue); }
+
+  .image-container {
+    position: relative;
+    height: 500px; /* Made taller since we removed the text below */
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .compare-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .compare-card:hover .compare-img {
+    transform: scale(1.05);
+  }
+
+  .grayscale { filter: grayscale(80%) sepia(20%); }
+
+  .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 5;
+  }
+  
+  .gradient-red {
+    background: linear-gradient(to top, rgba(20,0,0,0.9) 0%, rgba(20,0,0,0.2) 60%, transparent 100%);
+  }
+
+  .gradient-blue {
+    background: linear-gradient(to top, rgba(0,10,30,0.9) 0%, rgba(0,10,30,0.2) 60%, transparent 100%);
+  }
+
+  /* Metric Overlay */
+  .metric-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 2rem 4rem 2rem;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .metric {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .metric-num, .metric-text {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    line-height: 1;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 5px;
+  }
+  
+  .metric-text {
+    font-size: 2.5rem;
+  }
+
+  .metric-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .highlight-green {
+    color: #22c55e !important;
+    text-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+  }
+
+  .text-white {
+    color: #ffffff !important;
+  }
+
+  .metric-divider {
+    width: 2px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 1rem 0.5rem 1rem;
+  }
+
+  .metric-divider.light {
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  .img-label {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    font-weight: 800;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .label-red { background-color: #ef4444; }
+  .label-blue { background-color: var(--color-accent-blue); }
+
+  @media (max-width: 992px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .metric-num, .metric-text { font-size: 2.5rem; }
+    .metric-text { font-size: 1.8rem; }
+    .metric-label { font-size: 0.85rem; }
+    .metric-overlay { padding: 2rem 1.5rem 3rem 1.5rem; }
+    .image-container { height: 400px; }
+  }
+</style>

@@ -1,0 +1,241 @@
+---
+
+---
+
+<section id="portfolio" class="portfolio">
+  <div class="portfolio-container">
+    <div class="header-content animate-fade-up">
+      <p class="subtitle">Live Demos</p>
+      <h2 class="section-title">Built for Tradies. Built to Convert.</h2>
+      <p class="section-desc">
+        Take a test drive of our high-speed, custom-coded layouts. No bloated
+        WordPress templates—just pure performance.
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Demo 1: Lawn Services -->
+      <div class="portfolio-card animate-fade-up delay-100">
+        <div class="image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1589923158776-cb4485d99fd6?auto=format&fit=crop&q=80&w=800"
+            alt="Lawn Care Website Demo"
+            class="portfolio-img"
+          />
+          <div class="hover-overlay">
+            <a href="#" class="btn btn-primary">View Live Demo</a>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="niche-tag">Lawn & Landscaping</div>
+          <h3>The "Green Pro" Framework</h3>
+          <p>
+            Engineered for local SEO dominance. Features a sticky 'Call Now'
+            header and an integrated Before/After gallery to prove your
+            expertise.
+          </p>
+        </div>
+      </div>
+
+      <!-- Demo 2: Auto Upholstery -->
+      <div class="portfolio-card animate-fade-up delay-200">
+        <div class="image-wrapper">
+          <img
+            src="/auto-upholstery.png"
+            alt="Auto Upholstery Website Demo"
+            class="portfolio-img"
+          />
+          <div class="hover-overlay">
+            <a
+              href="https://astro-demo-cypress-leather-interior.vercel.app/"
+              class="btn btn-primary">View Live Demo</a
+            >
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="niche-tag dark-tag">Auto Upholstery</div>
+          <h3>Cypress Leather Interiors</h3>
+          <p>
+            Premium Auto Upholstery and Interior Restoration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio {
+    padding: 8rem 0;
+    background-color: var(--color-cream);
+    color: var(--color-dark-blue);
+  }
+
+  .portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .header-content {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent-blue);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--color-dark-blue);
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 3rem;
+  }
+
+  .portfolio-card {
+    background-color: #ffffff;
+    border-radius: 0;
+    overflow: hidden;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+
+  .portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  }
+
+  .image-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .portfolio-card:hover .portfolio-img {
+    transform: scale(1.05);
+  }
+
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .portfolio-card:hover .hover-overlay {
+    opacity: 1;
+  }
+
+  .btn {
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    text-decoration: none;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+
+  .portfolio-card:hover .btn {
+    transform: translateY(0);
+  }
+
+  .btn-primary {
+    background-color: var(--color-accent-blue);
+    color: #ffffff;
+    border: 2px solid var(--color-accent-blue);
+  }
+
+  .btn-primary:hover {
+    background-color: #ffffff;
+    color: var(--color-accent-blue);
+  }
+
+  .card-content {
+    padding: 2.5rem;
+  }
+
+  .niche-tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    margin-bottom: 1.5rem;
+  }
+
+  .dark-tag {
+    background-color: rgba(15, 23, 42, 0.05);
+    color: var(--color-dark-blue);
+  }
+
+  .card-content h3 {
+    font-size: 1.6rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 1rem;
+  }
+
+  .card-content p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 992px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .portfolio {
+      padding: 4rem 0;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+  }
+</style>

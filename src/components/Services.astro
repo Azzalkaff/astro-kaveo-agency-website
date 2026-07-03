@@ -1,0 +1,162 @@
+---
+---
+
+<section id="services" class="services">
+  <div class="services-container">
+    <div class="header-content animate-fade-up">
+      <p class="subtitle">Our Expertise</p>
+      <h2 class="section-title">Digital Solutions Built<br/>For Growth</h2>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card animate-fade-up delay-100">
+        <div class="icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Google Maps SEO</h3>
+        <p>We optimize your Google Business Profile so you show up first when locals search for your exact services.</p>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="service-card animate-fade-up delay-200">
+        <div class="icon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+        </div>
+        <h3>Lead-Gen Websites</h3>
+        <p>Fast websites packed with AI-enhanced premium visuals that turn casual visitors into high-paying booked jobs.</p>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 8rem 0;
+    background-color: var(--color-dark-blue);
+    color: var(--color-cream);
+  }
+
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .header-content {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent-blue);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--color-cream);
+    line-height: 1.2;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    padding: 2.5rem;
+    background-color: rgba(249, 246, 240, 0.03);
+    border-radius: 0;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(249, 246, 240, 0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Top accent border on hover */
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-accent-blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(249, 246, 240, 0.06);
+    border-color: rgba(249, 246, 240, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: rgba(59, 130, 246, 0.15);
+    color: var(--color-accent-blue);
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover .icon-wrapper {
+    background-color: var(--color-accent-blue);
+    color: #ffffff;
+    transform: scale(1.1);
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-cream);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+  }
+
+  .service-card p {
+    color: rgba(249, 246, 240, 0.7);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 992px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services {
+      padding: 4rem 0;
+    }
+    .services-grid {
+      grid-template-columns: 1fr;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+    .service-card {
+      padding: 1.5rem;
+    }
+  }
+</style>

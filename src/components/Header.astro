@@ -1,0 +1,219 @@
+---
+---
+
+<header class="header">
+  <div class="header-container">
+    <a href="#" class="logo" style="display: flex; align-items: center;">
+      <img src="/kaveo-logo.png" alt="Kaveo Logo" class="brand-logo" />
+    </a>
+    
+    <nav class="nav-links">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#portfolio" class="nav-link">Our Work</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="tel:+61412345678" class="nav-cta">
+        <span class="cta-text">0412 345 678</span>
+        <svg class="cta-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      
+      <!-- Mobile Toggle Button -->
+      <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Toggle Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<nav id="mobile-menu" class="mobile-menu">
+  <ul class="mobile-menu-list">
+    <li><a href="#services" class="mobile-link">Services</a></li>
+    <li><a href="#portfolio" class="mobile-link">Our Work</a></li>
+    <li><a href="#pricing" class="mobile-link">Pricing</a></li>
+    <li><a href="#about" class="mobile-link">About Us</a></li>
+  </ul>
+</nav>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* Efek glassmorphism */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand-logo {
+    height: 40px;
+    width: auto;
+    transform: scale(2.0);
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+  }
+
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-dark-blue);
+    letter-spacing: -0.05em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
+    background-color: var(--color-dark-blue);
+  }
+
+  .cta-icon {
+    display: none;
+  }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-cream);
+    background-color: var(--color-dark-blue);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-cta:hover {
+    background-color: var(--color-accent-blue);
+    transform: translateY(-2px);
+  }
+
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-dark-blue);
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001; /* Above the mobile menu */
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff; /* Solid color to prevent GPU bottleneck */
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .mobile-link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-link:hover {
+    color: var(--color-accent-blue);
+  }
+
+  @media (max-width: 768px) {
+    .brand-logo {
+      transform: scale(1.4);
+    }
+    .nav-links {
+      gap: 0.5rem;
+    }
+    .nav-link {
+      display: none;
+    }
+    .mobile-toggle {
+      display: block;
+    }
+    .cta-text {
+      display: none;
+    }
+    .cta-icon {
+      display: block;
+    }
+    .nav-cta {
+      padding: 0.6rem;
+      border-radius: 50%; /* Bulat sempurna di mobile */
+    }
+  }
+</style>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+  
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      if (mobileMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
+    
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+</script>

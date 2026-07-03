@@ -1,0 +1,497 @@
+---
+---
+
+<section id="conversion-zone" class="cz-section">
+  <div class="cz-container">
+    <div class="header-content animate-fade-up">
+      <p class="subtitle">The Kaveo Advantage</p>
+      <h2 class="section-title">See It. Calculate It.</h2>
+      <p class="section-desc">Watch how your customers find you, and calculate exactly how much it's worth to your bottom line.</p>
+    </div>
+
+    <div class="cz-grid">
+      
+      <!-- Left: Mobile Phone Demo -->
+      <div class="cz-phone-demo animate-fade-up delay-100">
+        <div class="phone-frame">
+          <div class="notch"></div>
+          <div class="phone-screen">
+            
+            <!-- Google Search View -->
+            <div class="screen-view search-view">
+              <div class="g-header">
+                <span class="g-logo">G</span>
+                <div class="g-search-bar">emergency plumber brisbane</div>
+              </div>
+              <div class="g-results">
+                <div class="g-ad">Ad &middot; localplumbers.com.au</div>
+                <div class="g-title">Cheap Plumbers - Call Now</div>
+                <div class="g-desc">We fix pipes cheap. Call us today.</div>
+                
+                <div class="g-spacer"></div>
+
+                <div class="g-organic highlight">
+                  <div class="g-title brand-title">Kaveo Plumbing | 24/7 Premium Service</div>
+                  <div class="g-rating">⭐⭐⭐⭐⭐ (142) &middot; Plumber</div>
+                  <div class="g-desc">Brisbane's top-rated emergency plumbing service. Fast response.</div>
+                </div>
+              </div>
+              <!-- Simulated Cursor -->
+              <div class="cursor"></div>
+            </div>
+
+            <!-- Website View (After Click) -->
+            <div class="screen-view website-view">
+              <div class="w-header">Kaveo Plumbing.</div>
+              <div class="w-hero">
+                <h1>Fix It Right. Fix It Now.</h1>
+                <p>Top-rated emergency plumbers in Brisbane.</p>
+                <div class="w-btn-pulse">
+                  <div class="w-btn">Tap to Call 📞</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <p class="demo-caption"><strong>Interactive Demo:</strong> The exact journey your customers take to find and book you.</p>
+      </div>
+
+      <!-- Right: ROI Calculator -->
+      <div class="cz-calculator animate-fade-up delay-200">
+        <div class="calc-card">
+          <div class="calc-header">
+            <h3>Calculate Your ROI</h3>
+            <p>Adjust the sliders to see your potential revenue increase.</p>
+          </div>
+          
+          <div class="calc-body">
+            <!-- Slider 1 -->
+            <div class="slider-group">
+              <div class="slider-labels">
+                <label for="job-value">Average Job Value</label>
+                <span class="slider-val" id="val-job">$500</span>
+              </div>
+              <input type="range" id="job-value" min="100" max="5000" step="100" value="500" class="kaveo-slider">
+            </div>
+
+            <!-- Slider 2 -->
+            <div class="slider-group">
+              <div class="slider-labels">
+                <label for="lead-vol">New Leads per Month</label>
+                <span class="slider-val" id="val-lead">10</span>
+              </div>
+              <input type="range" id="lead-vol" min="1" max="50" step="1" value="10" class="kaveo-slider">
+            </div>
+
+            <div class="conversion-rate-info">
+              <small>*Assuming a conservative 30% closing rate on incoming leads.</small>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="result-row">
+              <span>Extra Monthly Revenue:</span>
+              <span class="result-highlight" id="res-month">+$1,500</span>
+            </div>
+            <div class="result-row annual">
+              <span>Extra Yearly Revenue:</span>
+              <span class="result-highlight giant" id="res-year">+$18,000</span>
+            </div>
+          </div>
+          
+          <div class="calc-footer">
+            <p>Our 'Website Only' bundle is just a <strong>one-time fee of $699</strong>. No brainer, right?</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .cz-section {
+    padding: 8rem 0;
+    background-color: #ffffff;
+    border-top: 1px solid rgba(15, 23, 42, 0.05);
+  }
+
+  .cz-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .header-content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent-blue);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--color-dark-blue);
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+  }
+
+  .cz-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  /* --- LEFT: MOBILE PHONE DEMO --- */
+  .cz-phone-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-frame {
+    width: 300px;
+    height: 600px;
+    background-color: #1a1a1a;
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2), inset 0 0 0 2px #444;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 25px;
+    background-color: #1a1a1a;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: 10;
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Animation Views */
+  .screen-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* View 1: Search */
+  .search-view {
+    opacity: 1; /* Starts visible */
+    animation: searchToWeb 10s infinite;
+  }
+
+  .g-header {
+    padding: 3rem 1rem 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .g-logo { font-weight: 800; color: #4285F4; font-size: 1.2rem; }
+  .g-search-bar {
+    background: #f1f3f4;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #333;
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .g-results {
+    padding: 1rem;
+  }
+  .g-ad { font-size: 0.7rem; color: #202124; font-weight: 600; margin-bottom: 4px; }
+  .g-title { font-size: 0.95rem; color: #1a0dab; font-weight: 500; margin-bottom: 4px; }
+  .g-rating { font-size: 0.7rem; color: #70757a; margin-bottom: 4px; }
+  .g-desc { font-size: 0.8rem; color: #4d5156; line-height: 1.4; }
+  .g-spacer { height: 20px; border-bottom: 1px solid #eee; margin-bottom: 20px; }
+
+  .g-organic.highlight {
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    position: relative;
+  }
+
+  .brand-title { color: #1a0dab; font-size: 1.05rem; }
+
+  /* Animated Cursor */
+  .cursor {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black" stroke="white" stroke-width="2"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/></svg>');
+    background-size: cover;
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    z-index: 20;
+    opacity: 0;
+    animation: cursorMove 10s infinite;
+  }
+
+  /* View 2: Website */
+  .website-view {
+    background-color: var(--color-dark-blue);
+    color: white;
+    animation: webToSearch 10s infinite;
+  }
+
+  .w-header {
+    padding: 2.5rem 1rem 1rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .w-hero {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .w-hero h1 { font-size: 1.8rem; margin-bottom: 10px; line-height: 1.2; }
+  .w-hero p { font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: 30px; }
+
+  .w-btn-pulse {
+    position: relative;
+    display: inline-block;
+  }
+  .w-btn-pulse::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #22c55e;
+    border-radius: 30px;
+    z-index: 0;
+    animation: pulseBtn 2s infinite;
+  }
+
+  .w-btn {
+    position: relative;
+    z-index: 1;
+    background-color: #22c55e;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+  }
+
+  .demo-caption {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    max-width: 300px;
+  }
+  .demo-caption strong { color: var(--color-dark-blue); }
+
+  /* Animations */
+  @keyframes cursorMove {
+    0% { top: 400px; left: 200px; opacity: 0; }
+    10% { opacity: 1; }
+    25% { top: 220px; left: 150px; transform: scale(1); }
+    30% { transform: scale(0.8); } /* Click! */
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  @keyframes searchToWeb {
+    0%, 30% { opacity: 1; }
+    35%, 90% { opacity: 0; }
+    95%, 100% { opacity: 1; }
+  }
+
+  @keyframes webToSearch {
+    0%, 30% { opacity: 0; }
+    35%, 90% { opacity: 1; }
+    95%, 100% { opacity: 0; }
+  }
+
+  @keyframes pulseBtn {
+    0% { transform: scale(1); opacity: 0.8; }
+    70% { transform: scale(1.3); opacity: 0; }
+    100% { transform: scale(1); opacity: 0; }
+  }
+
+  /* --- RIGHT: ROI CALCULATOR --- */
+  .calc-card {
+    background-color: var(--color-cream);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border: 1px solid rgba(15, 23, 42, 0.05);
+  }
+
+  .calc-header { margin-bottom: 2.5rem; }
+  .calc-header h3 { font-size: 1.8rem; color: var(--color-dark-blue); margin-bottom: 5px; }
+  .calc-header p { color: var(--color-text-muted); }
+
+  .calc-body { margin-bottom: 2.5rem; }
+
+  .slider-group { margin-bottom: 1.5rem; }
+  .slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .slider-labels label { font-weight: 600; color: var(--color-dark-blue); }
+  .slider-val { font-weight: 800; color: var(--color-accent-blue); font-size: 1.1rem; }
+
+  /* Custom Range Slider */
+  .kaveo-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    outline: none;
+  }
+  .kaveo-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-accent-blue);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+    transition: transform 0.1s;
+  }
+  .kaveo-slider::-webkit-slider-thumb:hover { transform: scale(1.1); }
+
+  .conversion-rate-info {
+    margin-top: 1rem;
+    color: #64748b;
+    font-style: italic;
+  }
+
+  .calc-results {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+  }
+
+  .result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--color-dark-blue);
+  }
+  .result-row.annual {
+    margin-bottom: 0;
+    padding-top: 10px;
+    border-top: 1px dashed #e2e8f0;
+  }
+
+  .result-highlight {
+    font-weight: 800;
+    color: #22c55e; /* Green for money */
+  }
+  .result-highlight.giant {
+    font-size: 1.5rem;
+  }
+
+  .calc-footer {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.05);
+  }
+  .calc-footer p { font-size: 1.05rem; color: var(--color-text-muted); line-height: 1.5; }
+  .calc-footer strong { color: var(--color-dark-blue); }
+
+  @media (max-width: 992px) {
+    .cz-grid { grid-template-columns: 1fr; gap: 4rem; }
+  }
+  @media (max-width: 640px) {
+    .calc-card { padding: 2rem; }
+  }
+</style>
+
+<script>
+  function initCalculator() {
+    const sliderJob = document.getElementById('job-value') as HTMLInputElement;
+    const sliderLead = document.getElementById('lead-vol') as HTMLInputElement;
+    
+    const valJob = document.getElementById('val-job');
+    const valLead = document.getElementById('val-lead');
+    const resMonth = document.getElementById('res-month');
+    const resYear = document.getElementById('res-year');
+
+    if (!sliderJob || !sliderLead || !valJob || !valLead || !resMonth || !resYear) return;
+
+    // Format currency
+    const formatMoney = (amount: number) => {
+      return new Intl.NumberFormat('en-AU', { style: 'currency', currency: 'AUD', maximumFractionDigits: 0 }).format(amount);
+    };
+
+    const calculate = () => {
+      const jobVal = parseInt(sliderJob.value);
+      const leads = parseInt(sliderLead.value);
+      
+      // Update labels
+      valJob.innerText = formatMoney(jobVal);
+      valLead.innerText = leads.toString();
+
+      // Calculation: leads * conversion rate (30%) * job value
+      const conversionRate = 0.3;
+      const closedJobs = leads * conversionRate;
+      
+      const extraMonthly = closedJobs * jobVal;
+      const extraYearly = extraMonthly * 12;
+
+      // Update results
+      resMonth.innerText = '+' + formatMoney(extraMonthly);
+      resYear.innerText = '+' + formatMoney(extraYearly);
+    };
+
+    // Event Listeners
+    sliderJob.addEventListener('input', calculate);
+    sliderLead.addEventListener('input', calculate);
+    
+    // Initial Calc
+    calculate();
+  }
+
+  document.addEventListener('DOMContentLoaded', initCalculator);
+  document.addEventListener('astro:page-load', initCalculator);
+</script>
