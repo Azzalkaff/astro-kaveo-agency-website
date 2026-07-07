@@ -4,7 +4,7 @@
 <section class="hero">
   <div class="hero-container">
     <div class="hero-content">
-      <p class="subtitle animate-fade-up">High-Performance Web Design</p>
+
       <h1 class="title animate-fade-up delay-100">
         Get More Leads with a <span class="highlight">High-Converting</span> Website.
       </h1>
@@ -14,12 +14,6 @@
       <div class="actions animate-fade-up delay-300">
         <a href="#about" class="btn btn-primary">Discover More</a>
         <a href="https://wa.me/61412345678" class="btn btn-secondary">Let's Talk</a>
-      </div>
-      <div class="social-proof animate-fade-up delay-400">
-        <div class="proof-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-        </div>
-        <p><strong>Special Offer:</strong> Currently taking on 3 ambitious clients to build my 2026 case studies. Your first project is <a href="#pricing">100% Risk-Free</a>.</p>
       </div>
     </div>
   </div>
@@ -62,74 +56,34 @@
     max-width: 800px;
   }
 
-  .subtitle {
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--color-accent-blue);
-    margin-bottom: 1.5rem;
-  }
+
 
   .title {
     font-size: clamp(2.25rem, 5vw, 4.5rem);
-    margin-bottom: 2rem;
-    color: var(--color-dark-blue);
+    margin-bottom: 2.5rem; /* Ditambah dari 2rem */
+    color: var(--color-primary);
+    line-height: 1.1;
   }
 
   .highlight {
-    color: var(--color-accent-blue);
+    color: var(--color-accent);
     font-style: italic;
   }
 
   .description {
-    font-size: 1.25rem;
+    font-size: 1.35rem; /* Sedikit dibesarkan */
     color: var(--color-text-muted);
-    margin-bottom: 3rem;
+    margin-bottom: 4rem; /* Ditambah dari 3rem */
     max-width: 600px;
+    line-height: 1.8; /* Lebih lega */
   }
 
   .actions {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 1.5rem; /* Ditambah dari 1rem */
+    margin-bottom: 4rem; /* Ditambah dari 2rem */
   }
 
-  .social-proof {
-    background-color: #ffffff;
-    padding: 1.5rem 2rem;
-    border-radius: 0;
-    border: 1px solid rgba(15, 23, 42, 0.05);
-    border-left: 4px solid var(--color-accent-blue);
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    max-width: 650px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  }
-
-  .proof-icon {
-    color: var(--color-accent-blue);
-    flex-shrink: 0;
-    margin-top: 0;
-  }
-
-  .social-proof p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-text-muted);
-    margin: 0;
-  }
-
-  .social-proof strong {
-    color: var(--color-dark-blue);
-  }
-
-  .social-proof a {
-    color: var(--color-accent-blue);
-    font-weight: 600;
-    text-decoration: underline;
-  }
 
   .btn {
     padding: 1rem 2rem;
@@ -141,35 +95,32 @@
   }
 
   .btn-primary {
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-primary);
     color: var(--color-cream);
-    border: 2px solid var(--color-dark-blue);
+    border: 2px solid var(--color-primary);
   }
 
   .btn-primary:hover {
-    background-color: var(--color-accent-blue);
-    border-color: var(--color-accent-blue);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
   }
 
   .btn-secondary {
     background-color: transparent;
-    color: var(--color-dark-blue);
-    border: 2px solid var(--color-dark-blue);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
   }
 
   .btn-secondary:hover {
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-primary);
     color: var(--color-cream);
     transform: translateY(-2px);
   }
 
   @media (max-width: 768px) {
-    .subtitle {
-      font-size: 0.95rem;
-      letter-spacing: 1px;
-    }
+
     .actions {
       flex-direction: column;
       gap: 1.25rem;

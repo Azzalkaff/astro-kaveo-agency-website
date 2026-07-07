@@ -2,8 +2,8 @@
 
 :root {
   --color-cream: #F9F6F0;
-  --color-dark-blue: #1E3A8A; /* Menggunakan warna KPI sebelumnya */
-  --color-accent-blue: #3B82F6; /* Warna baru yang lebih terang untuk hover/highlight */
+  --color-primary: #0F172A; /* Menggunakan warna KPI sebelumnya */
+  --color-accent: #D97706; /* Warna baru yang lebih terang untuk hover/highlight */
   --color-text-muted: #475569;
   
   --font-sans: 'Inter', sans-serif;
@@ -24,10 +24,26 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--color-cream);
-  color: var(--color-dark-blue);
+  color: var(--color-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+/* Global Texture Overlay */
+.global-bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/images/topography-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.06; /* Sangat samar agar teks tetap terbaca */
+  z-index: -1;
+  pointer-events: none;
 }
 
 h1, h2, h3, h4, h5, h6 {

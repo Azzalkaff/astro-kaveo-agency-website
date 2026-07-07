@@ -1,5 +1,7 @@
 ---
-
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+const portfolioProjects = await getCollection('portfolio');
 ---
 
 <section id="portfolio" class="portfolio">
@@ -14,61 +16,35 @@
     </div>
 
     <div class="portfolio-grid">
-      <!-- Demo 1: Lawn Services -->
-      <div class="portfolio-card animate-fade-up delay-100">
-        <div class="image-wrapper">
-          <img
-            src="https://images.unsplash.com/photo-1589923158776-cb4485d99fd6?auto=format&fit=crop&q=80&w=800"
-            alt="Lawn Care Website Demo"
-            class="portfolio-img"
-          />
-          <div class="hover-overlay">
-            <a href="#" class="btn btn-primary">View Live Demo</a>
+      {portfolioProjects.map((project, index) => (
+        <div class={`portfolio-card animate-fade-up delay-${(index + 1) * 100}`}>
+          <div class="image-wrapper">
+            <img
+              src={project.data.image}
+              alt={`${project.data.title} Demo`}
+              class="portfolio-img"
+            />
+            <div class="hover-overlay">
+              <a href={project.data.link} class="btn btn-primary">View Live Demo</a>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class={`niche-tag ${project.data.isDarkTag ? 'dark-tag' : ''}`}>{project.data.tag}</div>
+            <h3>{project.data.title}</h3>
+            <p>{project.data.description}</p>
           </div>
         </div>
-        <div class="card-content">
-          <div class="niche-tag">Lawn & Landscaping</div>
-          <h3>The "Green Pro" Framework</h3>
-          <p>
-            Engineered for local SEO dominance. Features a sticky 'Call Now'
-            header and an integrated Before/After gallery to prove your
-            expertise.
-          </p>
-        </div>
-      </div>
-
-      <!-- Demo 2: Auto Upholstery -->
-      <div class="portfolio-card animate-fade-up delay-200">
-        <div class="image-wrapper">
-          <img
-            src="/auto-upholstery.png"
-            alt="Auto Upholstery Website Demo"
-            class="portfolio-img"
-          />
-          <div class="hover-overlay">
-            <a
-              href="https://astro-demo-cypress-leather-interior.vercel.app/"
-              class="btn btn-primary">View Live Demo</a
-            >
-          </div>
-        </div>
-        <div class="card-content">
-          <div class="niche-tag dark-tag">Auto Upholstery</div>
-          <h3>Cypress Leather Interiors</h3>
-          <p>
-            Premium Auto Upholstery and Interior Restoration.
-          </p>
-        </div>
-      </div>
+      ))}
     </div>
   </div>
+
 </section>
 
 <style>
   .portfolio {
     padding: 8rem 0;
     background-color: var(--color-cream);
-    color: var(--color-dark-blue);
+    color: var(--color-primary);
   }
 
   .portfolio-container {
@@ -87,13 +63,13 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-accent-blue);
+    color: var(--color-accent);
     margin-bottom: 1rem;
   }
 
   .section-title {
     font-size: clamp(2.5rem, 4vw, 3.5rem);
-    color: var(--color-dark-blue);
+    color: var(--color-primary);
     margin-bottom: 1rem;
   }
 
@@ -178,14 +154,14 @@
   }
 
   .btn-primary {
-    background-color: var(--color-accent-blue);
+    background-color: var(--color-accent);
     color: #ffffff;
-    border: 2px solid var(--color-accent-blue);
+    border: 2px solid var(--color-accent);
   }
 
   .btn-primary:hover {
     background-color: #ffffff;
-    color: var(--color-accent-blue);
+    color: var(--color-accent);
   }
 
   .card-content {
@@ -207,12 +183,12 @@
 
   .dark-tag {
     background-color: rgba(15, 23, 42, 0.05);
-    color: var(--color-dark-blue);
+    color: var(--color-primary);
   }
 
   .card-content h3 {
     font-size: 1.6rem;
-    color: var(--color-dark-blue);
+    color: var(--color-primary);
     margin-bottom: 1rem;
   }
 
